@@ -1,8 +1,77 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
-h1 {
-  color: #333;
-}
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+    color: white;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  h1 {
+    color: #ffffff;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+  }
+  
+  .social-icons a {
+    text-decoration: red;
+    color: #333;
+    font-size: 24px;
+    border: 2px solid #333; /* Add a border to each anchor tag */
+    padding: 15px; /* Add padding for better spacing */
+  }
+  
+  .social-icons img {
+    width: 40px; /* Adjust the width of the image as needed */
+    height: auto;
+    border-radius: 0%; /* Optional: add border radius for a circular effect on the image */
+  }  
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Center items vertically */
+    margin: 20px;
+    flex-direction: column; /* Stack icons vertically */
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    color: #fff; /* Set text color to white for better contrast */
+    font-size: 24px;
+    border: 2px solid transparent; /* Set initial border color to transparent */
+    padding: 5px; /* Reduced padding */
+    background: linear-gradient(to right, #eaeaea, #008077); /* Red to purple gradient */
+    border-radius: 10px; /* Adjust border-radius as needed */
+    transition: all 0.3s ease; /* Add a smooth transition effect for all properties */
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center; /* Center text vertically */
+  }
+  
+  .social-icons a {
+    border-color: #fff; /* Change border color on hover */
+    transform: scale(1.1); /* Scale the icon on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a subtle box shadow on hover */
+  }
+  
+  .social-icons img {
+    width: 50px;
+    height: auto;
+    border-radius: 0%;
+  }
+  
+  body {
+    background-image: url('./img/background.png');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+  }
+  
