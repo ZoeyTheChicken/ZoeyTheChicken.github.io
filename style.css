@@ -7,4 +7,14 @@ h1 {
   color: #333;
 }
 
-/* Add more styles as needed */
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
