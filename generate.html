@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="styles.css">
+<title>Generate Millions of Robux!</title>
+Click the play button on this video to learn how to get robux!
+<br>
+<video width="800" height="600" controls autoplay>
+    <source src="vid/rickroll.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<script>
+    // Get the video element by its ID
+    var video = document.getElementById('myVideo');
+
+    // Autoplay the video when the page is loaded
+    window.onload = function() {
+        video.play().catch(function(error) {
+            // Autoplay was prevented, handle the error
+            console.error('Autoplay prevented:', error);
+        });
+    };
+</script>
