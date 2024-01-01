@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>freeiphone.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>You just won a free iPhone 15 Pro Max Titanium 1TB!</h1>
+    <img src="./iphone15pm.png">
+
+    <!-- The button with an onclick attribute to redirect to pranked.html -->
+    <button onclick="redirectToPranked()">Claim your iPhone 15 Pro Max</button>
+
+    <script>
+        // JavaScript function to redirect to pranked.html
+        function redirectToPranked() {
+            window.location.href = 'pranked.html';
+        }
+    </script>
+    <h2>With this new iPhone, you can: Download any app you want without worrying about storage, get the newest features and iOS. And you'll get a long time of support.</h2>
+    <h4>&copy; 2024 freeiphone.com</h4>
+    <script>
+    function goFullScreen() {
+        var elem = document.documentElement;
+
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
+    }
+
+    // Call the goFullScreen function when the page loads
+    window.onload = goFullScreen;
+</script>
+
+</body>
+</html>
