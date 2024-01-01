@@ -1,0 +1,22 @@
+/* styles.css */
+
+body {
+  background-color: #cacaca;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px #000;
+}
+
+button {
+  background-color: #0074CC;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+}
+
+button:hover {
+  background-color: #005692;
+}
