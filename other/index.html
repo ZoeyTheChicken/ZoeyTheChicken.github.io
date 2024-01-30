@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Client</title>
+    <!-- Add the Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url("client_future_bg_img.png");
+            position: relative;
+            height: 100vh; /* Make sure the body takes the full height of the viewport */
+            animation: borderFlash 3s infinite alternate; /* Animation for the flashing rainbow border */
+            color: #fff; /* Set the default text color to white */
+        }
+
+        .text {
+            margin-top: 15px;
+        }
+
+        .download-button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .download-button:hover {
+            background-color: #000000;
+        }
+
+        .download-button:hover::after {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 28px;
+            animation: borderFlash 3s infinite alternate;
+        }
+
+        #why-chickenclient,
+        #chickenclient-extra-secrets {
+            color: #fff; /* Set the text color for specific sections */
+        }
+
+        @keyframes borderFlash {
+            0% {
+                border: 3px solid red;
+            }
+            20% {
+                border: 3px solid orange;
+            }
+            40% {
+                border: 3px solid yellow;
+            }
+            60% {
+                border: 3px solid green;
+            }
+            80% {
+                border: 3px solid blue;
+            }
+            100% {
+                border: 3px solid violet;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <h1>Chicken Client 2.0 - NEW!</h1>
+    </div>
+
+    <a href="https://github.com/ZoeyTheChicken/Chicken-Client-Installer/releases/download/1.17.0.90/ChickenClientInstaller-1.17.0.90.exe" download="filename.pdf" class="download-button">
+        Download and experience the future of Minecraft!
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Other sections with white text -->
+    <section id="why-chickenclient">
+        <h3>Our client comes with many features to improve your gameplay and more!</h3>
+        <br>
+        <h3>Download Chicken Client now and see what you are missing out on!</h3>
+        <br>
+        <h3>Make sure to apply those beautiful free capes we give you and flex 'em!</h3>
+        <br>
+        <h3>If you have not downloaded Chicken Client yet, what are doing!? You should click our nice download button up there!</h3>
+    </section>
+    <br>
+    <section id="chickenclient-extra-secrets">
+        <h5>You can use our client to make server's assume that you're running a newer version of Minecraft. ex. If a server, let's say 'downloadchicken.client.com' supports 1.19.3 only, you can use our client to join on 1.8 without the server support ViaVersion, etc.</h5>
+    </section>
+</body>
+</html>
