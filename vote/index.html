@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Colored iPhone 5</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .productredip5text {
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Basic button styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color: #970000;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            color: gold;
+        }
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/iphone.png" alt="Custom iPhone 5">
+    </div>
+    <div class="productredip5text">
+        <h3>Custom iPhone 5</h3>
+        <h4>Goal required: 600 subscribers by April 21, 2024</h4>
+        <a href="/colorvote.html" class="button" id="button">Subscribe and make it possible</a>
+        <script>
+            // JavaScript to handle button click and open two links
+            document.getElementById('button').addEventListener('click', function() {
+                // Add your destination page URLs
+                window.open('https://youtube.com/@ZoeyTheChicken?sub_confirmation=1', '_blank');
+            });
+        </script>
+    </div>
+</body>
+</html>
