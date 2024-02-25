@@ -38,24 +38,24 @@
     </style>
 </head>
 <body>
-    <h1>Vote on the Color of the CUSTOM 600 SUBSCRIBER IPHONE 5!</h1>
+    <h1 style="color: white;">Vote on the Color of the CUSTOM 600 SUBSCRIBER IPHONE 5!</h1>
     
     <div>
-        <button class="color-button red" onclick="vote('Red')">Red</button>
-        <button class="color-button blue" onclick="vote('Blue')">Blue</button>
-        <button class="color-button yellow" onclick="vote('Yellow')">Yellow</button>
-        <button class="color-button orange" onclick="vote('Orange')">Orange</button>
-        <button class="color-button green" onclick="vote('Green')">Green</button>
-        <button class="color-button purple" onclick="vote('Purple')">Purple</button>
+        <button class="color-button red" onclick="vote('Red', 'yt-community')">Red</button>
+        <button class="color-button blue" onclick="vote('Blue', 'twitter-post')">Blue</button>
+        <button class="color-button yellow" onclick="vote('Yellow', 'discord')">Yellow</button>
+        <button class="color-button orange" onclick="vote('Orange', 'yt-video')">Orange</button>
+        <button class="color-button green" onclick="vote('Green', 'unknown')">Green</button>
+        <button class="color-button purple" onclick="vote('Purple', 'unknown')">Purple</button>
     </div>
 
     <script>
-        function vote(color) {
+        function vote(color, source) {
             const webhookUrl = 'https://discord.com/api/webhooks/1211396898641158236/_JNQ88BARshlMMrFvRbLbFxJ3R4g4Jqdihh5oXMC63Oz18Maz9w3IJlQ-CEbh-Luqw_Q';
 
             // Form the message payload
             const payload = {
-                content: `Someone voted for ${color}!`,
+                content: `Someone voted for ${color} from ${source}!`,
             };
 
             // Make a POST request to the Discord webhook
