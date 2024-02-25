@@ -41,42 +41,18 @@
 </head>
 <body>
     <div class="container">
-        <img src="/vote/iphone.png" alt="Custom iPhone 5">
+        <img src="/iphone.png" alt="Custom iPhone 5">
     </div>
     <div class="productredip5text">
         <h3>Custom iPhone 5</h3>
         <h4>Goal required: 600 subscribers by April 21, 2024</h4>
-        <!-- Add data-source attribute to store the source -->
-        <a href="javascript:void(0);" class="button" id="button" data-source="unknown">Subscribe and make it possible</a>
+        <a href="/colorvote.html" class="button" id="button">Subscribe and make it possible</a>
         <script>
+            // JavaScript to handle button click and open two links
             document.getElementById('button').addEventListener('click', function() {
-                // Get the data-source attribute value
-                var source = this.getAttribute('data-source');
-
-                // Add your destination page URL with the source parameter
-                var destinationURL = 'https://zoeythechicken.github.io/vote/colorvote/colorvote.html?u=' + source;
-
-                // Open the destination page
-                window.open(destinationURL, '_blank');
+                // Add your destination page URLs
+                window.open('https://youtube.com/@ZoeyTheChicken?sub_confirmation=1', '_blank');
             });
-
-            // Modify the source attribute based on the href
-            var sources = {
-                'yt-community': 'yt-community',
-                'twitter-post': 'twitter-post',
-                'discord': 'discord',
-                'yt-video': 'yt-video',
-                'unknown': 'unknown'
-            };
-
-            // Set the data-source attribute based on the href
-            var currentPageURL = window.location.href;
-            for (var key in sources) {
-                if (currentPageURL.includes('https://youtube.com/@ZoeyTheChicken?sub_confirmation=1' + key)) {
-                    document.getElementById('button').setAttribute('data-source', sources[key]);
-                    break;
-                }
-            }
         </script>
     </div>
 </body>
