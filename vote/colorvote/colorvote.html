@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote on the color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+        }
+
+        .color-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Color-specific styles */
+        .red { background-color: #ff0000; color: #fff; }
+        .blue { background-color: #0000ff; color: #fff; }
+        .yellow { background-color: #ffff00; color: #000; }
+        .orange { background-color: #ffa500; color: #fff; }
+        .green { background-color: #008000; color: #fff; }
+        .purple { background-color: #800080; color: #fff; }
+        
+        h1 {
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Vote on the Color of the CUSTOM 600 SUBSCRIBER IPHONE 5!</h1>
+    
+    <div>
+        <button class="color-button red" onclick="vote('Red')">Red</button>
+        <button class="color-button blue" onclick="vote('Blue')">Blue</button>
+        <button class="color-button yellow" onclick="vote('Yellow')">Yellow</button>
+        <button class="color-button orange" onclick="vote('Orange')">Orange</button>
+        <button class="color-button green" onclick="vote('Green')">Green</button>
+        <button class="color-button purple" onclick="vote('Purple')">Purple</button>
+    </div>
+
+    <script>
+        function vote(color) {
+            const webhookUrl = 'https://discord.com/api/webhooks/1211396898641158236/_JNQ88BARshlMMrFvRbLbFxJ3R4g4Jqdihh5oXMC63Oz18Maz9w3IJlQ-CEbh-Luqw_Q';
+
+            // Form the message payload
+            const payload = {
+                content: `Someone voted for ${color}!`,
+            };
+
+            // Make a POST request to the Discord webhook
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                alert(`Error processing request. Try again later`);
+            });
+
+            alert(`You voted for ${color}! Check in for the winner around April 21-30.`);
+        }
+    </script>
+</body>
+</html>
