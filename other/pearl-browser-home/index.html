@@ -32,5 +32,15 @@ span.sponsored-tag {
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function search() {
+    var searchTerm = document.getElementById('searchInput').value;
+    // Construct the Google search URL with the search term
+    var googleSearchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(searchTerm);
+    // Redirect the user to the Google search results page
+    window.location.href = googleSearchUrl;
+}
+
+    </script>
 </body>
 </html>
