@@ -10,7 +10,7 @@ function search() {
 var defaultCustomLinks = [
     { id: 1, name: 'GitHub', url: 'https://github.com' },
     { id: 2, name: 'Google', url: 'https://google.com' },
-    { id: 3, name: 'Chicken Client', url: 'https://chickenclientmc.wixsite.com/chicken-client-mc' },
+    { id: 3, name: 'Chicken Client', url: 'https://client.chickennetwork.fun' },
     { id: 4, name: 'YouTube', url: 'https://youtube.com' },
     { id: 5, name: 'Twitter', url: 'https://twitter.com' }
 ];
