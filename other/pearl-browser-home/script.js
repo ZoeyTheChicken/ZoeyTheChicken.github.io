@@ -83,8 +83,8 @@ function populateQuickLinks() {
     sponsoredShortcutsContainer.appendChild(sponsoredTitle);
 
     var sponsoredLinks = [
-        { name: 'Windows Chicken - Custom Operating System', url: 'https://winchick.wixsite.com/windows-chicken' },
-        { name: 'Chicken Client', url: 'https://ZoeyTheChicken.github.io/other/index.html' },
+        { name: 'Chicken Network', url: 'https://chickennetwork.fun' },
+        { name: 'Chicken Client', url: 'https://client.chickennetwork.fun' },
     ];
 
     sponsoredLinks.forEach(function (link) {
