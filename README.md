@@ -1,2 +1,1 @@
-# Zoey's Website
-Lot's of cool stuff here!
+# bro this website is based ngl you cant lie, no cap.
