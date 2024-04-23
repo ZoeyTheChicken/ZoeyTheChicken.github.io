@@ -1,0 +1,49 @@
+/* Existing styles */
+
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* New styles for centering at the top */
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background: url('./img-src/background.png') no-repeat center center fixed;
+    background-size: 25%;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20vh;
+  }
+  
+  /* Additional style for a better font */
+  body, p, a {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* New style for the MacBook Air image */
+  #mba-image {
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    text-shadow: none; /* Remove text shadow for the image */
+    color: inherit; /* Use the default text color for the image */
+  }  
