@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Default dark background style */
+        body.defaultDark {
+            background-color: #333; /* Dark color */
+        }
+        .container {
+            background-color: rgb(98, 98, 98);
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search the internet or use the address bar...">
+            <button onclick="search()" class="btn-search">&#x1F50E;</button>
+        </div>
+        <div>
+            <label for="backgroundSelect">Select Background:</label>
+            <select id="backgroundSelect" onchange="changeBackground()">
+                <option value="lightGray">Default Light</option>
+                <option value="defaultDark">Default Dark</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input type="file" id="customBackground" style="display: none;" accept="image/*" onchange="previewCustomBackground(event)">
+        </div>
+        <h3>Pearl &ndash; Compact and quick searching</h3>
+    </div>
+    <script>
+        // Function to change background
+        function changeBackground() {
+            var selectedBackground = document.getElementById('backgroundSelect').value;
+            if (selectedBackground === 'custom') {
+                document.getElementById('customBackground').click();
+            } else {
+                document.getElementById('body').className = selectedBackground;
+                // Save selected background to local storage
+                localStorage.setItem('selectedBackground', selectedBackground);
+                // Clear custom background cache
+                localStorage.removeItem('customBackground');
+            }
+        }
+
+        // Function to preview custom background image
+        function previewCustomBackground(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function() {
+                document.getElementById('body').style.backgroundImage = 'url(' + reader.result + ')';
+                // Save 'custom' as selected background to local storage
+                localStorage.setItem('selectedBackground', 'custom');
+                // Save custom background to local storage
+                localStorage.setItem('customBackground', reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Function to retrieve background from local storage
+        function retrieveBackground() {
+            var selectedBackground = localStorage.getItem('selectedBackground');
+            if (selectedBackground) {
+                if (selectedBackground === 'custom') {
+                    var customBackground = localStorage.getItem('customBackground');
+                    if (customBackground) {
+                        document.getElementById('body').style.backgroundImage = 'url(' + customBackground + ')';
+                    }
+                } else {
+                    document.getElementById('body').className = selectedBackground;
+                }
+            }
+        }
+
+        // Function to perform search
+        function search() {
+            var searchTerm = document.getElementById('searchInput').value;
+            // Construct the Google search URL with the search term
+            var googleSearchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(searchTerm);
+            // Redirect the user to the Google search results page
+            window.location.href = googleSearchUrl;
+        }
+
+        // Call retrieveBackground function when the page loads
+        window.onload = retrieveBackground;
+    </script>
+</body>
+</html>
